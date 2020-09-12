@@ -6,6 +6,7 @@ body {
 
 body {
     @include serif-font;
+    // @include nazanin-font;
 }
 
 hr {
@@ -75,7 +76,7 @@ aside {
     @include sans-serif-font;
     @include transition-all;
     .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: white;
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
@@ -90,7 +91,7 @@ aside {
             > a:focus {
                 text-transform: uppercase;
                 font-weight: 700;
-                font-size: 13px;
+                font-size: 15px;
                 color: $theme-dark;
                 &:hover {
                     color: $theme-primary;
@@ -109,7 +110,7 @@ aside {
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
+        background-color:rgba($theme-dark, .7);
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
             color: rgba(white, .7);
@@ -126,11 +127,11 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: $theme-dark;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
-                font-size: 14px;
+                font-size: 15px;
                 &:hover,
                 &:focus {
                     color: darken($theme-primary, 10%);
@@ -155,7 +156,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background: linear-gradient(rgba(50, 38, 51, 0.6), rgba(0, 0, 0, 0)), url('../img/header.jpg');
     text-align: center;
     color: white;
     .header-content {
@@ -164,20 +165,29 @@ header {
         padding: 100px 15px 100px;
         width: 100%;
         .header-content-inner {
+            .logo {
+                display: block;
+                margin-top: -5%;
+                // margin-bottom: -4%;
+                margin-left: 17%;
+                margin-right: auto;
+                filter: invert(100%);
+                width: 60%;
+                height: 60%;
+            }
             h1 {
                 font-weight: 700;
+                margin-bottom: 10%;
                 text-transform: uppercase;
-                margin-top: 0;
-                margin-bottom: 0;
             }
             hr {
                 margin: 30px auto;
             }
             p {
-                font-weight: 300;
-                color: rgba(white, .7);
-                font-size: 16px;
-                margin-bottom: 50px;
+                font-weight: 500;
+                color: rgba(white, .9);
+                font-size: 30px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -195,7 +205,7 @@ header {
                 margin-left: auto;
                 margin-right: auto;
                 p {
-                    font-size: 18px;
+                    font-size: 25px;
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
@@ -214,10 +224,15 @@ header {
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;
+    
     @media (min-width: 992px) {
         margin: 20px auto 0;
     }
+    h3{
+        font-family: 'b_nazaninregular';
+    }
     p {
+        font-family: 'b_nazaninregular';
         margin-bottom: 0;
     }
 }
@@ -306,6 +321,7 @@ header {
 .btn {
     @include sans-serif-font;
     border: none;
+    font-size: 20px;
     border-radius: 300px;
     font-weight: 700;
     text-transform: uppercase;
@@ -318,7 +334,7 @@ header {
 // Contact
 #contact .fa {
     color: $theme-dark;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 // Extras

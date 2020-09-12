@@ -1,12 +1,11 @@
 # Site settings
 title: Deco Stone
-email:
+email: deco-stone@gmail.com
 description: Best quality design and material for best best decorations!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
-twitter_username:
-github_username:
+instagram_username: deco-stone
 
 # Build settings
 markdown: kramdown
